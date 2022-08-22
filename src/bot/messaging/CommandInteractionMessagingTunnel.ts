@@ -90,7 +90,7 @@ export default class CommandInteractionMessagingTunnel extends MessagingTunnel {
     public async end(reason?: MessagingAnswer): Promise<void> {
         if (this.reply) {
             try {
-                await this.editReply(reason ?? { content: '.', components: [], embeds: [] });
+                await this.editReply(reason ?? { content: '.', embeds: [] });
                 await this.reply.reactions.removeAll();
             } catch {
                 // ignore api error

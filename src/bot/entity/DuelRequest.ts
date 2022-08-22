@@ -83,22 +83,6 @@ export default class DuelRequest {
 
         return {
             allowedMentions: { parse: ['users'] },
-            components: !this.useReactions
-                ? [
-                      new MessageActionRow().addComponents(
-                          new MessageButton({
-                              style: 'SUCCESS',
-                              customId: 'yes',
-                              label: localize.__('duel.button.accept')
-                          }),
-                          new MessageButton({
-                              style: 'DANGER',
-                              customId: 'no',
-                              label: localize.__('duel.button.decline')
-                          })
-                      )
-                  ]
-                : [],
             content: this.invited.toString(),
             embeds: [
                 {
@@ -186,7 +170,6 @@ export default class DuelRequest {
         } else {
             return this.tunnel.end({
                 allowedMentions: { parse: [] },
-                components: [],
                 content: localize.__('duel.reject', { invited: this.invited.displayName }),
                 embeds: []
             });
@@ -199,7 +182,6 @@ export default class DuelRequest {
     private async challengeExpired(): Promise<void> {
         return this.tunnel.end({
             allowedMentions: { parse: [] },
-            components: [],
             content: localize.__('duel.expire', { invited: this.invited.displayName }),
             embeds: []
         });

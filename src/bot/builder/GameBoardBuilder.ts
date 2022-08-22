@@ -146,8 +146,7 @@ export default class GameBoardBuilder {
         const state = this.state && board ? '\n' + this.state : this.state;
         return {
             allowedMentions: { parse: ['users'] },
-            content: this.title + board + state,
-            components: []
+            content: this.title + board + state
         };
     }
 }

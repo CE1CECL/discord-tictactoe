@@ -261,7 +261,7 @@ export default class GameBoard {
      * @private
      */
     private async onExpire(): Promise<void> {
-        await this.tunnel.end({ content: localize.__('game.expire'), components: [] });
+        await this.tunnel.end({ content: localize.__('game.expire')});
         this.manager.endGame(this);
     }
 

@@ -87,7 +87,7 @@ export default class ComponentInteractionMessagingTunnel extends MessagingTunnel
      */
     public async end(reason?: MessagingAnswer): Promise<void> {
         try {
-            await this.editReply(reason ?? { content: '.', components: [], embeds: [] });
+            await this.editReply(reason ?? { content: '.', embeds: [] });
             await (this.interaction.message as Message).reactions.removeAll();
         } catch (e) {
             // ignore api error

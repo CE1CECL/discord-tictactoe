@@ -75,12 +75,7 @@ export default class GameBoardButtonBuilder extends GameBoardBuilder {
      */
     override toMessageOptions(): MessageOptions {
         return {
-            content: this.title + this.state,
-            components: [...Array(this.boardSize).keys()].map(row =>
-                new MessageActionRow().addComponents(
-                    [...Array(this.boardSize).keys()].map(col => this.createButton(row, col))
-                )
-            )
+            content: this.title + this.state
         };
     }
 

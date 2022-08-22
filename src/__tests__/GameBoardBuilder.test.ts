@@ -19,8 +19,7 @@ describe('GameBoardBuilder', () => {
     it('should send empty message by default', () => {
         expect(builder.toMessageOptions()).toEqual({
             allowedMentions: { parse: ['users'] },
-            content: '',
-            components: []
+            content: ''
         });
     });
 

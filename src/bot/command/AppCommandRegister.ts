@@ -52,11 +52,13 @@ export default class AppCommandRegister {
             message.member.permissions.has('ADMINISTRATOR')
         ) {
             const words = message.content.split(' ');
+			const tttdeploy = process.env.tttdeploy || 'tttdeploy'
+			const tttdelete = process.env.tttdelete || 'tttdelete'
             if (words.length === 2) {
-                if (words.includes('tttdeploy')) {
+                if (words.includes(tttdeploy)) {
                     await this.registerInGuild(message.guild.id);
                     await message.reply(`Command /${this.name} has been registered.`);
-                } else if (words.includes('tttdelete')) {
+                } else if (words.includes(tttdelete)) {
                     const executed = await this.deleteInGuild(message.guild.id);
                     if (executed) {
                         await message.reply(`Command /${this.name} has been unregistered.`);

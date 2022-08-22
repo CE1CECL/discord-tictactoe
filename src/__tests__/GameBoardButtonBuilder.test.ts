@@ -18,7 +18,7 @@ describe('GameBoardButtonBuilder', () => {
     });
 
     it('should send empty message by default', () => {
-        expect(builder.toMessageOptions()).toEqual({ content: '', components: [] });
+        expect(builder.toMessageOptions()).toEqual({ content: ''});
     });
 
     it('should compute board components', () => {
