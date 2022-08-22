@@ -68,7 +68,7 @@ class TicTacToe {
             ],
 		     http: {
                 version: version as number,
-                agent: agent as Object,
+                agent: agent as object,
                 api: api as string,
                 cdn: cdn as string,
                 invite: invite as string,
