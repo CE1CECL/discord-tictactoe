@@ -52,8 +52,8 @@ export default class AppCommandRegister {
             message.member.permissions.has('ADMINISTRATOR')
         ) {
             const words = message.content.split(' ');
-			const tttdeploy = process.env.tttdeploy || '?tttdeploy'
-			const tttdelete = process.env.tttdelete || '?tttdelete'
+            const tttdeploy = process.env.tttdeploy || '?tttdeploy';
+            const tttdelete = process.env.tttdelete || '?tttdelete';
             if (words.length === 2) {
                 if (words.includes(tttdeploy)) {
                     await this.registerInGuild(message.guild.id);

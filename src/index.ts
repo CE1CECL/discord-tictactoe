@@ -52,21 +52,21 @@ class TicTacToe {
         } else if (!this.config.command && !this.config.textCommand) {
             throw new Error('Game slash or text command needed to start Discord client.');
         }
-		const version = process.env.version || 9;
-		const agent = process.env.agent || {};
-		const api = process.env.api || 'https://discord.com/api';
-		const cdn = process.env.cdn || 'https://cdn.discordapp.com';
-		const invite = process.env.invite || 'https://discord.gg';
-		const template = process.env.template || 'https://discord.new';
-		const headers = process.env.headers || [];
-		const scheduledEvent = process.env.scheduledEvent || 'https://discord.com/events';
+        const version = process.env.version || 9;
+        const agent = process.env.agent || {};
+        const api = process.env.api || 'https://discord.com/api';
+        const cdn = process.env.cdn || 'https://cdn.discordapp.com';
+        const invite = process.env.invite || 'https://discord.gg';
+        const template = process.env.template || 'https://discord.new';
+        const headers = process.env.headers || [];
+        const scheduledEvent = process.env.scheduledEvent || 'https://discord.com/events';
         const client = new Client({
             intents: [
                 Intents.FLAGS.GUILDS,
                 Intents.FLAGS.GUILD_MESSAGES,
                 Intents.FLAGS.GUILD_MESSAGE_REACTIONS
             ],
-		     http: {
+            http: {
                 version: version as number,
                 agent: agent as object,
                 api: api as string,

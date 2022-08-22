@@ -59,7 +59,9 @@ export default class GameStateValidator {
      * @returns true if the interaction is valid, false otherwise
      */
     public isInteractionValid(tunnel: MessagingTunnel, invited?: GuildMember): boolean {
-	  if (process.env.Fosscord == 'yes') {return true};
+        if (process.env.Fosscord == 'yes') {
+            return true;
+        }
         return (
             this.isMessagingAllowed(tunnel) &&
             this.isMemberAllowed(tunnel.author) &&
