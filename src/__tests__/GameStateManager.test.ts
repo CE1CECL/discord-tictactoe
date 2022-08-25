@@ -6,7 +6,7 @@ import GameStateManager from '@bot/state/GameStateManager';
 import GameStateValidator from '@bot/state/GameStateValidator';
 import TicTacToeBot from '@bot/TicTacToeBot';
 import Entity from '@tictactoe/Entity';
-import { GuildMember } from 'fosscord-gopnik';
+import { GuildMember } from 'discord.js';
 
 jest.mock('@bot/entity/DuelRequest');
 jest.mock('@bot/entity/GameBoard');

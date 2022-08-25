@@ -12,7 +12,7 @@ import {
     MessageOptions,
     MessageReaction,
     Snowflake
-} from 'fosscord-gopnik';
+} from 'discord.js';
 
 /**
  * Message sent when a user challenges someone else to a duel.
@@ -98,7 +98,7 @@ export default class DuelRequest {
      * Attachs the duel request to a specific message
      * and reacts to it in order to get processed.
      *
-     * @param message fosscord-gopnik message object to attach
+     * @param message discord.js message object to attach
      */
     public async attachTo(message: Message): Promise<void> {
         if (this.useReactions) {

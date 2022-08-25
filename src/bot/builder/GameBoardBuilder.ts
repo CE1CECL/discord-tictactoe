@@ -2,7 +2,7 @@ import localize from '@i18n/localize';
 import AI from '@tictactoe/AI';
 import Entity from '@tictactoe/Entity';
 import { Player } from '@tictactoe/Player';
-import { MessageOptions } from 'fosscord-gopnik';
+import { MessageOptions } from 'discord.js';
 
 /**
  * Builds representation of a game board using text emojis

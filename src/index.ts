@@ -2,7 +2,7 @@ import EventHandler, { EventType } from '@bot/EventHandler';
 import TicTacToeBot from '@bot/TicTacToeBot';
 import Config from '@config/Config';
 import localize from '@i18n/localize';
-import { Client, CommandInteraction, Intents, Message } from 'fosscord-gopnik';
+import { Client, CommandInteraction, Intents, Message } from 'discord.js';
 
 /**
  * Controls all interactions between modules of the bot.
@@ -84,25 +84,25 @@ class TicTacToe {
     /**
      * Attaches an external Discord Client to the module.
      *
-     * @param client fosscord-gopnik client instance
+     * @param client discord.js client instance
      */
     public attach(client: Client): void {
         this.bot.attachToClient(client);
     }
 
     /**
-     * Programmatically handles a fosscord-gopnik message to request a game.
+     * Programmatically handles a discord.js message to request a game.
      *
-     * @param message fosscord-gopnik message object
+     * @param message discord.js message object
      */
     public handleMessage(message: Message): void {
         this.bot.handleMessage(message);
     }
 
     /**
-     * Programmatically handles a fosscord-gopnik interaction to request a game.
+     * Programmatically handles a discord.js interaction to request a game.
      *
-     * @param interaction fosscord-gopnik interaction object
+     * @param interaction discord.js interaction object
      */
     public handleInteraction(interaction: CommandInteraction): void {
         this.bot.handleInteraction(interaction);

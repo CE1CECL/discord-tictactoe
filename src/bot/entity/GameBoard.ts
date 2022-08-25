@@ -14,7 +14,7 @@ import {
     MessageReaction,
     Snowflake,
     WebhookEditMessageOptions
-} from 'fosscord-gopnik';
+} from 'discord.js';
 
 /**
  * Message sent to display the status of a game board.
@@ -143,7 +143,7 @@ export default class GameBoard {
      * Attachs the duel request to a specific message
      * and reacts to it in order to get processed.
      *
-     * @param message fosscord-gopnik message object to attach
+     * @param message discord.js message object to attach
      */
     public async attachTo(message: Message): Promise<void> {
         // Add reactions below message if enabled
