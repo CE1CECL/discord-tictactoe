@@ -21,6 +21,8 @@
     "typescript"
   ],
   "dependencies": {
+    "fosscord.js": "git+https://github.com/CE1CECL/fosscord.js.git",
+    "fosscord-gopnik": "git+https://github.com/CE1CECL/fosscord-gopnik.git",
     "discord.js": "^13.6.0"
   },
   "devDependencies": {
